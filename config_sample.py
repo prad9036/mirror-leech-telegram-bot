@@ -1,8 +1,11 @@
+import os
+import json
+
 # REQUIRED CONFIG
-BOT_TOKEN = ""
-OWNER_ID = 0
-TELEGRAM_API = 0
-TELEGRAM_HASH = ""
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OWNER_ID = int(os.getenv("OWNER_ID", 0))
+TELEGRAM_API = int(os.getenv("TELEGRAM_API", 0))
+TELEGRAM_HASH = os.getenv("BOT_TOKEN")
 # OPTIONAL CONFIG
 TG_PROXY = {}
 USER_SESSION_STRING = ""
