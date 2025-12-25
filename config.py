@@ -6,14 +6,20 @@ BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 OWNER_ID = int(os.getenv("OWNER_ID", 0))
 TELEGRAM_API = int(os.getenv("TELEGRAM_API", 0))
 TELEGRAM_HASH = os.getenv("TELEGRAM_HASH", "")
+AUTHORIZED_CHATS = os.getenv("AUTHORIZED_CHATS", "").split()
+
+# space-separated user IDs for sudo users
+SUDO_USERS = [int(uid) for uid in os.getenv("SUDO_USERS", "").split() if uid]
+
+DATABASE_URL = os.getenv("DATABASE_URL", "")
 
 # OPTIONAL CONFIG
 TG_PROXY = {}
 USER_SESSION_STRING = ""
 CMD_SUFFIX = ""
 AUTHORIZED_CHATS = ""
-SUDO_USERS = ""
-DATABASE_URL = ""
+#SUDO_USERS = ""
+#DATABASE_URL = ""
 STATUS_LIMIT = 4
 DEFAULT_UPLOAD = "rc"
 STATUS_UPDATE_INTERVAL = 15
